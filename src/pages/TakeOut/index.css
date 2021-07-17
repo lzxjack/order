@@ -1,0 +1,4 @@
+.TakeOut-box {
+    min-height: calc(100vh - 70px);
+    background-color: rgb(50, 235, 142);
+}

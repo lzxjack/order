@@ -1,0 +1,29 @@
+nav {
+    display: flex;
+    background-color: rgb(224, 247, 252);
+}
+
+.nav-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    font-size: 40px;
+    font-weight: 700;
+    user-select: none;
+    color: #000;
+    cursor: default;
+    transition: all 0.2s;
+}
+.nav-item:hover {
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
+}
+
+.active-cook {
+    background-color: rgb(91, 230, 240);
+}
+
+.active-takeout {
+    background-color: rgb(50, 235, 142);
+}

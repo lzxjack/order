@@ -25,19 +25,41 @@
     background-color: rgb(91, 189, 235);
 }
 
-.main {
-    width: 1000px;
+.main,
+.side {
+    width: 500px;
     height: 660px;
-    background-color: rgb(89, 203, 238);
+    background-color: #fff;
     position: absolute;
     top: 70px;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-550px, 0);
     transition: all 0.2s;
-    padding: 30px;
 }
-.main:hover {
+.main:hover,
+.side:hover {
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7);
+}
+.side {
+    transform: translate(50px, 0);
+}
+
+.title {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(10, 190, 245);
+    font-size: 28px;
+    /* font-weight: 700; */
+    color: #fff;
+    user-select: none;
+}
+
+.content {
+    height: 600px;
+    background-color: rgb(89, 203, 238);
+    padding: 30px;
 }
 
 .theTag {

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Got from '../../components/Got';
 import './index.css';
 
@@ -6,7 +6,7 @@ const Cook = () => {
     const [isGot, setIsGot] = useState(false);
     const [name, setName] = useState('');
     const main = ['鸡肉', '猪肉', '花菜', '土豆'];
-    // const side = ['豆腐', '鸡丁'];
+    const side = ['豆腐', '鸡丁'];
     const tagColor = [
         'rgb(236, 17, 17)',
         'rgb(236, 141, 17)',
@@ -32,7 +32,7 @@ const Cook = () => {
         '#108ee9',
     ];
     const mainLen = main.length;
-    // const sideLen = side.length;
+    const sideLen = side.length;
     const colorLen = tagColor.length;
     const getRandomNum = (Min, Max) => {
         const Range = Max - Min + 1;
@@ -40,29 +40,45 @@ const Cook = () => {
         return Min + Math.floor(Rand * Range);
     };
     const getName = () => {
-        const newName = `${main[getRandomNum(0, mainLen - 1)]}`;
+        const newName = `${main[getRandomNum(0, mainLen - 1)]}炒${
+            side[getRandomNum(0, sideLen - 1)]
+        }`;
         setName(newName);
         setIsGot(true);
-    };
-    const reOrder = () => {
-        setIsGot(false);
     };
     return (
         <>
             {isGot ? (
-                <Got name={name} reOrder={reOrder} cook={1} />
+                <Got name={name} />
             ) : (
                 <div className="Cook-box">
                     <div className="main">
-                        {main.map((item, index) => (
-                            <span
-                                className="theTag"
-                                style={{ backgroundColor: tagColor[(index + 1) % colorLen] }}
-                                key={index}
-                            >
-                                {item}
-                            </span>
-                        ))}
+                        <div className="title">主菜</div>
+                        <div className="content">
+                            {main.map((item, index) => (
+                                <span
+                                    className="theTag"
+                                    style={{ backgroundColor: tagColor[(index + 1) % colorLen] }}
+                                    key={index}
+                                >
+                                    {item}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="side">
+                        <div className="title">小菜</div>
+                        <div className="content">
+                            {side.map((item, index) => (
+                                <span
+                                    className="theTag"
+                                    style={{ backgroundColor: tagColor[(index + 1) % colorLen] }}
+                                    key={index}
+                                >
+                                    {item}
+                                </span>
+                            ))}
+                        </div>
                     </div>
                     <div className="make-btn" onClick={getName}>
                         看看吃啥!

@@ -52,8 +52,8 @@ const TakeOut = () => {
             {isGot ? (
                 <Got name={name} reOrder={reOrder} cook={0} />
             ) : (
-                <div className="Cook-box">
-                    <div className="main">
+                <div className="TakeOut-box">
+                    <div className="main take-out-main">
                         {main.map((item, index) => (
                             <span
                                 className="theTag"
@@ -64,7 +64,7 @@ const TakeOut = () => {
                             </span>
                         ))}
                     </div>
-                    <div className="make-btn" onClick={getName}>
+                    <div className="make-btn take-out-btn" onClick={getName}>
                         看看点啥!
                     </div>
                 </div>

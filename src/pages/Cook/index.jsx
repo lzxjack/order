@@ -5,7 +5,7 @@ import './index.css';
 const Cook = () => {
     const [isGot, setIsGot] = useState(false);
     const [name, setName] = useState('');
-    const main = ['鸡肉', '猪肉', '花菜', '土豆'];
+    const main = ['花菜', '四季豆', '土豆丝', '豆腐干', '胡萝卜', '香菇', '土豆片'];
     // const side = ['豆腐', '鸡丁'];
     const tagColor = [
         'rgb(236, 17, 17)',

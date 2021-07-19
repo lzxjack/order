@@ -1,0 +1,1 @@
+cd F:\my-blog\react-blog-admin\build&&tcb hosting deploy -e order-4g328cmk514b8eae

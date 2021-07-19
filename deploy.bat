@@ -1,1 +1,2 @@
-cd F:\my-blog\react-blog-admin\build&&tcb hosting deploy -e order-4g328cmk514b8eae
+@echo off
+yarn build&&cd build&&tcb hosting deploy -e todolist-3gayiz0cb9b8b263
